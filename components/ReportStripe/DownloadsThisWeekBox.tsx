@@ -6,10 +6,12 @@ import ReportBox from "./ReportBox";
 
 export interface DownloadsThisWeekBoxProps {
     value: number;
+    className: string;
 }
 
 const DownloadsThisWeekBox = ({
     value,
+    className,
 }: DownloadsThisWeekBoxProps) => {
     const $wrapper = useRef<HTMLDivElement>();
     const {
@@ -22,7 +24,7 @@ const DownloadsThisWeekBox = ({
     });
 
     return (
-        <div ref={$wrapper}>
+        <div ref={$wrapper} className={className}>
             <ReportBox
                 title={text as string}
                 description="Downloads last week"

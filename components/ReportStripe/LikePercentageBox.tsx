@@ -5,10 +5,12 @@ import ReportBox from "./ReportBox";
 
 export interface LikePercentageBoxProps {
     value: number;
+    className: string;
 }
 
 const LikePercentageBox = ({
     value,
+    className,
 }: LikePercentageBoxProps) => {
     const $wrapper = useRef<HTMLDivElement>();
     const {
@@ -21,7 +23,7 @@ const LikePercentageBox = ({
     });
 
     return (
-        <div ref={$wrapper}>
+        <div ref={$wrapper} className={className}>
             <ReportBox
                 title={text as string}
                 description="People love Typescript"

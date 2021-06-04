@@ -18,6 +18,7 @@
 @media (max-width: 600px) {
     .icons {
         max-width: 20rem;
+        flex-wrap: wrap;
     }
 
     .icon {

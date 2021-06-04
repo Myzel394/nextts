@@ -2,8 +2,22 @@
     background: var(--background-inset);
     display: flex;
     justify-content: center;
+
+    margin-bottom: 5em;
 }
 
 .element:not(:last-of-type) {
-    border-right: .1em solid var(--background);
+    border-right: .2em solid var(--background);
+}
+
+@media (max-width: 688px) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .element {
+        border-bottom: .2em solid var(--background);
+        border-right: none;
+        flex: 0 0 100%;
+    }
 }

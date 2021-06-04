@@ -6,10 +6,12 @@ import ReportBox from "./ReportBox";
 
 export interface DefinitionsAvailableBoxProps {
     value: number;
+    className: string;
 }
 
 const DefinitionsAvailableBox = ({
     value,
+    className,
 }: DefinitionsAvailableBoxProps) => {
     const $wrapper = useRef<HTMLDivElement>();
     const {
@@ -22,7 +24,7 @@ const DefinitionsAvailableBox = ({
     });
 
     return (
-        <div ref={$wrapper}>
+        <div ref={$wrapper} className={className}>
             <ReportBox
                 title={text as string}
                 description="Definitions available"

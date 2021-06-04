@@ -18,9 +18,9 @@ const ReportStripe = ({
 }: ReportStripeProps) => {
     return (
         <div className={styles.wrapper}>
-            <DownloadsThisWeekBox value={downloadsThisWeek} />
-            <DefinitionsAvailableBox value={typesAvailable} />
-            <LikePercentageBox value={likePercentage} />
+            <DownloadsThisWeekBox className={styles.element} value={downloadsThisWeek} />
+            <DefinitionsAvailableBox className={styles.element} value={typesAvailable} />
+            <LikePercentageBox className={styles.element} value={likePercentage} />
         </div>
     );
 };
