@@ -7,7 +7,7 @@ import styles from "./VisualLearnerHint.module.css";
 
 const VisualLearnerHint = () => {
     return (
-        <section>
+        <section id="tutorials">
             <AreaTitle title="Want to learn more about Typescript?" />
             <SecondaryInformation className={styles.description}>
                 Check out these awesome videos to learn Typescript now :)
