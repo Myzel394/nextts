@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    max-width: 70rem;
+}
+
+.box {
+    padding: 2em;
+    flex: 0 0 calc(100% / 3);
+}
+
+@media (max-width: 1000px) {
+    .wrapper {
+        max-width: 50rem;
+    }
+
+    .box {
+        padding: 1em;
+        flex: 0 0 calc(100% / 2);
+    }
+}
+
+@media (max-width: 688px) {
+    .box {
+        padding: .5em;
+        flex: 0 0 100%;
+    }
+}

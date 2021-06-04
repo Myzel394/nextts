@@ -1,0 +1,30 @@
+.wrapper {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    letter-spacing: .2em;
+    font-size: 1.2rem;
+}
+
+.divider {
+    width: 1px;
+    height: 1em;
+    margin: 0 1em;
+    background: var(--text-secondary);
+}
+
+.anchors {
+    display: flex;
+}
+
+@media (max-width: 688px) {
+    .wrapper {
+        margin-top: 0;
+        letter-spacing: 0;
+    }
+
+    .divider {
+        margin: 0 .5em;
+    }
+}

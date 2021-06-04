@@ -87,7 +87,8 @@
             "when": "multiline"
         }],
         "unused-imports/no-unused-imports": ["error"],
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/consistent-indexed-object-style": "off"
     },
     "env": {
         "browser": true,

@@ -1,0 +1,51 @@
+.primary {
+    margin: .4em auto;
+
+    font-size: 7rem;
+
+    background-size: 100% 100%;
+    background: rgb(241,224,90);
+    background: linear-gradient(135deg, rgba(241,224,90,1) 0%, rgba(43,116,137,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 .8em rgba(43, 116, 137, 0.5);
+
+    animation: primaryAnimation 5s ease infinite;
+}
+
+.secondary {
+    margin: 0 auto;
+
+    font-size: 4rem;
+    color: var(--text-primary);
+}
+
+.font {
+    text-align: center;
+    font-weight: 700;
+}
+
+@keyframes primaryAnimation {
+    0% {
+        text-shadow: 0 0 .8em rgba(43, 116, 137, 0.5);
+        background-size: 400% 400%
+    }
+    50% {
+        text-shadow: 0 0 .5em rgba(43, 116, 137, 0.6);
+        background-size: 100% 100%
+    }
+    100% {
+        text-shadow: 0 0 .8em rgba(43, 116, 137, 0.5);
+        background-size: 400% 400%
+    }
+}
+
+@media (max-width: 688px) {
+    .primary {
+        font-size: 3.5rem;
+    }
+
+    .secondary {
+        font-size: 2rem
+    }
+}

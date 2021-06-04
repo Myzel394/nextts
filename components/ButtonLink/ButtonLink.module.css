@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: .5em .8em;
+    border-radius: .5em;
+    transition: background .2s ease-out;
+}
+
+.wrapper:hover {
+    background: var(--background-color);
+}
+
+.sizeNormal {
+    font-size: 1.2rem;
+}
+
+.sizeLarge {
+    font-size: 1.5rem
+}
+
+.sizeSmall {
+    font-size: 1rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.startIcon {
+    margin-right: .2em;
+}
+
+.endIcon {
+    margin-left: .2em;
+}

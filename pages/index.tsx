@@ -1,4 +1,11 @@
+import Showcase from "components/Showcase";
+import WhyArea from "components/WhyArea";
 
 export default function Home() {
-    return null;
+    return (
+        <>
+            <Showcase />
+            <WhyArea />
+        </>
+    );
 }

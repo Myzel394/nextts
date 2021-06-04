@@ -1,0 +1,26 @@
+.titleWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 40em;
+    text-align: center;
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 688px) {
+    .description {
+        font-size: .8rem;
+    }
+}
