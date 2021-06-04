@@ -1,0 +1,41 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: .5em;
+}
+
+.button {
+    width: .8em;
+    height: .8em;
+    border-radius: 50%;
+}
+
+.close {
+    background: #ff5f56;
+}
+
+.minimize {
+    background: #ffbd2e;
+}
+
+.open {
+    background: #27c93f;
+}
+
+.buttonsWrapper {
+    display: flex;
+    background: transparent;
+    border: none;
+}
+
+.buttonsWrapper > .button:not(:last-of-type) {
+    margin-right: .4em;
+}
+
+.title {
+    margin: 0;
+    color: var(--text-secondary);
+    font-weight: 300;
+}

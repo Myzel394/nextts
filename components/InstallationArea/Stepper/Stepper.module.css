@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 5em;
+    max-width: 70rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.explanationWrapper {
+    display: flex;
+    width: 100%;
+}
+
+.explanationContainer {
+    padding: 1em 3em;
+    flex: 1 0 calc(100% / 2);
+}
+
+.explanationContainer p {
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.singleText {
+    max-width: 40rem;
+}
+
+@media (max-width: 800px) {
+    .explanationWrapper {
+        flex-direction: column-reverse;
+    }
+}

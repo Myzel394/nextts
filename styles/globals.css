@@ -9,7 +9,8 @@ Desktop first, most developers use desktops instead of smartphones.
   --text-secondary: #ccc;
   --text-link: #1b7beb;
 
-  --background: #222;
+  --background: #000;
+  --background-inset: #222;
   --font: "Inter", Inter, Montserrat, Google Sans, Helvetica Neue, Helvetica, Roboto, sans-serif;
 }
 

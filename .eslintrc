@@ -88,7 +88,8 @@
         }],
         "unused-imports/no-unused-imports": ["error"],
         "react/react-in-jsx-scope": "off",
-        "@typescript-eslint/consistent-indexed-object-style": "off"
+        "@typescript-eslint/consistent-indexed-object-style": "off",
+        "@shopify/jsx-no-hardcoded-content": "off"
     },
     "env": {
         "browser": true,

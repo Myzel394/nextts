@@ -10,6 +10,7 @@ export interface ButtonLinkProps {
     href: string;
     size: "normal" | "large" | "small";
 
+    className?: string;
     color?: string;
     isExternal?: boolean;
     startIcon?: ReactNode;
@@ -31,6 +32,7 @@ const ButtonLink = ({
     startIcon,
     href,
     size,
+    className,
     color: givenColor,
 }: ButtonLinkProps) => {
     const defaultColor = getCSSVariable("--text-link", "#1b7beb");
@@ -47,7 +49,7 @@ const ButtonLink = ({
         // eslint-disable-next-line react/jsx-no-target-blank
         <a
             style={style}
-            className={clsx(styles.wrapper, sizeClass)}
+            className={clsx(styles.wrapper, sizeClass, className)}
             href={href}
             rel={isExternal ? "noopener noreferrer" : undefined}
             target={isExternal ? "_blank" : undefined}
