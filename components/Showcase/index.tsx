@@ -15,9 +15,9 @@ const Showcase = () => {
     // 888: Default for 1080p monitor
     const [availableHeight, setAvailableHeight] = useState<number>(828);
 
-    const [, headerHeight] = useElementSize($header.current);
-    const [, titleHeight] = useElementSize($title.current);
-    const [, paragraphHeight] = useElementSize($description.current);
+    const [, headerHeight = 0] = useElementSize($header.current);
+    const [, titleHeight = 0] = useElementSize($title.current);
+    const [, paragraphHeight = 0] = useElementSize($description.current);
 
     useEffect(() => {
         setAvailableHeight(window.innerHeight - headerHeight - titleHeight - paragraphHeight);
@@ -42,7 +42,10 @@ const Showcase = () => {
                 </div>
             </div>
             <div ref={$title}>
-                <AreaTitle title="Why Next.js + Typescript" />
+                <AreaTitle
+                    secondHeader
+                    title="Why Next.js + Typescript"
+                />
             </div>
         </>
     );

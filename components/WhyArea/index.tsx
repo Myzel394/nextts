@@ -8,6 +8,9 @@ import styles from "./WhyArea.module.css";
 const WhyArea = () => {
     return (
         <section id="why">
+            {/* Better for blind people who use screen readers */}
+            <h1 className={styles.hidden}>Why Next.js + Typescript</h1>
+
             <ul className={clsx("flexBoxList", styles.wrapper)}>
                 <li className={clsx("flexBoxElement", styles.box)}>
                     <ExplanationBox

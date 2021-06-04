@@ -11,17 +11,17 @@ import {DiNetbeans} from "react-icons/di";
 
 import styles from "./CrossPlatform.module.css";
 
-const ICONS = [
-    SiVisualstudiocode,
-    SiWebstorm,
-    DiNetbeans,
-    SiAtom,
-    SiVim,
-    SiIntellijidea,
-    SiReplDotIt,
-    SiSublimetext,
-    SiEclipseide,
-];
+const ICONS = {
+    "Visual Studio Code": SiVisualstudiocode,
+    Webstorm: SiWebstorm,
+    Netbeans: DiNetbeans,
+    Atom: SiAtom,
+    Vim: SiVim,
+    "IntelliJ IDEA": SiIntellijidea,
+    "Repl.it": SiReplDotIt,
+    "Sublime Text": SiSublimetext,
+    Eclipse: SiEclipseide,
+};
 
 const CrossPlatform = () => {
     return (
@@ -30,9 +30,16 @@ const CrossPlatform = () => {
                 Supported by 9+ cross-platform IDE&apos;s
             </h2>
             <div className={styles.icons}>
-                {ICONS.map(Icon =>
-                    <div key={Icon.toString()} className={styles.icon} >
+                {Object.entries(ICONS).map(([name, Icon]) =>
+                    <div key={name} className={styles.icon} >
                         <Icon size="1.8rem" />
+                        <div className={styles.tooltip}>
+                            <div className={styles.arrowWrapper}>
+                                <div className={styles.arrow} />
+                                <div className={styles.arrowBackground} />
+                            </div>
+                            <span>{name}</span>
+                        </div>
                     </div>)}
             </div>
         </>
