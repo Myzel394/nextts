@@ -37,7 +37,7 @@ const Editor = ({
     const currentCode = code.substring(0, codeIndex);
 
     return (
-        <div ref={$wrapper} className={styles.wrapper}>
+        <article ref={$wrapper} className={styles.wrapper}>
             <Bar
                 onClick={() => {
                     reset();
@@ -55,7 +55,7 @@ const Editor = ({
                 value={currentCode}
                 onValueChange={() => null}
             />
-        </div>
+        </article>
     );
 };
 

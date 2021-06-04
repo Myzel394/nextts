@@ -26,7 +26,7 @@ const Stepper = ({
 
     return (
         <li className={styles.wrapper}>
-            <Image src={svgPath} width="auto" height={120} />
+            <Image src={svgPath} width="auto" height={120} alt={`Step No. ${step}`} />
             <h1 className={styles.title}>{title}</h1>
             <div className={clsx(styles.explanationWrapper, !code && styles.singleText)}>
                 {code && (
