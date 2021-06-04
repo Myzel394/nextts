@@ -15,10 +15,8 @@ export interface EditorProps {
 }
 
 // eslint-disable-next-line id-length
-const easeInQuad = (t: number, b: number, c: number, d: number): number => {
-    // eslint-disable-next-line no-param-reassign
-    return c * (t /= d) * t + b;
-};
+const easeLinear = (t, b, c, d) =>
+    c * t / d + b;
 
 const Editor = ({
     code,
@@ -31,6 +29,7 @@ const Editor = ({
         hasBeenStarted,
     } = useVisibleCountUp({
         ref: $wrapper,
+        easingFn: easeLinear,
         end: code.length,
     });
     const codeIndex = hasBeenStarted ? parseInt(countUp.toString(), 10) : code.length;
@@ -45,7 +44,7 @@ const Editor = ({
                 }}
             />
             <CodeEditor
-                disabled
+                readOnly
                 highlight={(code) => highlight(code, bash)}
                 padding={10}
                 style={{

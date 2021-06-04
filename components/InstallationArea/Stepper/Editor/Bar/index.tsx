@@ -22,9 +22,9 @@ const Bar = ({
                 <span className={clsx(styles.button, styles.minimize)} />
                 <span className={clsx(styles.button, styles.open)} />
             </button>
-            <h6 className={styles.title}>
+            <p className={styles.title}>
                 Bash
-            </h6>
+            </p>
             <div />
         </div>
     );
