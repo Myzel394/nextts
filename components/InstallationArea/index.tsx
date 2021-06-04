@@ -11,7 +11,7 @@ import CrossPlatform from "./CrossPlatform";
 
 const InstallationArea = () => {
     return (
-        <>
+        <section id="installation">
             <AreaTitle title="How to add Typescript to Next.js" />
             <ul className={clsx("flexBoxList", styles.wrapper)}>
                 <Stepper
@@ -64,7 +64,7 @@ const InstallationArea = () => {
                     </ButtonLink>
                 </Stepper>
             </ul>
-        </>
+        </section>
     );
 };
 
