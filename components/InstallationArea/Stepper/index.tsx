@@ -25,7 +25,7 @@ const Stepper = ({
     const svgPath = `/assets/svgs/steppers/${step}.svg`;
 
     return (
-        <section className={styles.wrapper}>
+        <li className={styles.wrapper}>
             <Image src={svgPath} width="auto" height={120} />
             <h1 className={styles.title}>{title}</h1>
             <div className={clsx(styles.explanationWrapper, !code && styles.singleText)}>
@@ -41,7 +41,7 @@ const Stepper = ({
                 </aside>
             </div>
             {children}
-        </section>
+        </li>
     );
 };
 

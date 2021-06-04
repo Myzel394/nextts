@@ -1,13 +1,14 @@
 import ExplanationBox from "components/WhyArea/ExplanationBox";
 import {MdArrowDownward} from "react-icons/md";
 import {FaLongArrowAltRight} from "react-icons/fa";
+import clsx from "clsx";
 
 import styles from "./WhyArea.module.css";
 
 const WhyArea = () => {
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.box}>
+        <ul className={clsx("flexBoxList", styles.wrapper)}>
+            <li className={clsx("flexBoxElement", styles.box)}>
                 <ExplanationBox
                     title="Better DX"
                     description="Don’t make programming a pain in the ass. Everyone loves clean code and an easy-to-maintain codebase."
@@ -15,8 +16,8 @@ const WhyArea = () => {
                     linkTitle="Installation"
                     icon={MdArrowDownward}
                 />
-            </div>
-            <div className={styles.box}>
+            </li>
+            <li className={clsx("flexBoxElement", styles.box)}>
                 <ExplanationBox
                     title="Avoid Errors"
                     description="Spot dumb errors in development, instead of in production mode."
@@ -24,8 +25,8 @@ const WhyArea = () => {
                     linkTitle="Installation"
                     icon={MdArrowDownward}
                 />
-            </div>
-            <div className={styles.box}>
+            </li>
+            <li className={clsx("flexBoxElement", styles.box)}>
                 <ExplanationBox
                     title="Be modern"
                     description="Use new Javascript features with Typescript. Don’t worry about compatibility. That’s Typescript’s job."
@@ -33,8 +34,8 @@ const WhyArea = () => {
                     linkTitle="Installation"
                     icon={MdArrowDownward}
                 />
-            </div>
-            <div className={styles.box}>
+            </li>
+            <li className={clsx("flexBoxElement", styles.box)}>
                 <ExplanationBox
                     title="Use your IDE"
                     description="Help your IDE understand your code better, so it can help you writing better code."
@@ -42,8 +43,8 @@ const WhyArea = () => {
                     linkTitle="Installation"
                     icon={MdArrowDownward}
                 />
-            </div>
-            <div className={styles.box}>
+            </li>
+            <li className={clsx("flexBoxElement", styles.box)}>
                 <ExplanationBox
                     isExternal
                     title="Fully supported"
@@ -52,8 +53,8 @@ const WhyArea = () => {
                     linkTitle="Documentation"
                     icon={FaLongArrowAltRight}
                 />
-            </div>
-            <div className={styles.box}>
+            </li>
+            <li className={clsx("flexBoxElement", styles.box)}>
                 <ExplanationBox
                     isExternal
                     title="Next.js Features"
@@ -62,8 +63,8 @@ const WhyArea = () => {
                     linkTitle="Documentation"
                     icon={FaLongArrowAltRight}
                 />
-            </div>
-        </div>
+            </li>
+        </ul>
     );
 };
 

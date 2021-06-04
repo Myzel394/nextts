@@ -1,0 +1,21 @@
+.wrapper {
+    width: 100%;
+    border-radius: 2em;
+    margin: 0;
+}
+
+.wrapper img {
+    border-radius: 2em;
+
+    will-change: transform;
+    transition: transform .4s ease-in;
+}
+
+.wrapper img:hover {
+    transition: transform .4s ease-out;
+    transform: scale(1.01);
+}
+
+.wrapper p {
+    text-align: center;
+}

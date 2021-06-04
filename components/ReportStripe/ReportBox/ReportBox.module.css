@@ -6,6 +6,10 @@
     padding: 1em 2em;
 }
 
+.wrapper:not(:last-of-type) {
+    border-right: .2em solid var(--background);
+}
+
 .title {
     font-size: 3rem;
     font-weight: 700;
@@ -20,4 +24,15 @@
     color: var(--text-secondary);
 
     margin: 0;
+}
+
+@media (max-width: 688px) {
+    .wrapper:not(:last-of-type) {
+        border-bottom: .2em solid var(--background);
+        border-right: none;
+    }
+
+    .wrapper {
+        flex: 0 0 100%;
+    }
 }

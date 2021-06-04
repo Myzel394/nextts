@@ -2,6 +2,7 @@ import {GetStaticPropsResult} from "next";
 import inSeconds from "in-seconds";
 import {Showcase, WhyArea, InstallationArea, ReportStripe, ReportStripeProps} from "components";
 import {getPackageDownloads, getTypescriptTypesAmount} from "utils";
+import VisualLearnerHint from "components/VisualLearnerHint";
 
 export type HomeProps = ReportStripeProps;
 
@@ -20,6 +21,7 @@ export default function Home({
                 typesAvailable={typesAvailable}
                 downloadsThisWeek={downloadsThisWeek}
             />
+            <VisualLearnerHint />
         </>
     );
 }

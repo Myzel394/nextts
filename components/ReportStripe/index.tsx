@@ -1,6 +1,6 @@
-import DownloadsThisWeekBox from "components/ReportStripe/DownloadsThisWeekBox";
-import DefinitionsAvailableBox from "components/ReportStripe/DefinitionsAvailableBox";
-import LikePercentageBox from "components/ReportStripe/LikePercentageBox";
+import clsx from "clsx";
+import ReportBox from "components/ReportStripe/ReportBox";
+import millify from "millify";
 
 import styles from "./ReportStripe.module.css";
 
@@ -11,6 +11,8 @@ export interface ReportStripeProps {
     likePercentage: number;
 }
 
+const percentify = (value: number): string => `${parseInt(value.toString(), 10)}%`;
+
 const ReportStripe = ({
     downloadsThisWeek,
     likePercentage,
@@ -18,9 +20,23 @@ const ReportStripe = ({
 }: ReportStripeProps) => {
     return (
         <div className={styles.wrapper}>
-            <DownloadsThisWeekBox className={styles.element} value={downloadsThisWeek} />
-            <DefinitionsAvailableBox className={styles.element} value={typesAvailable} />
-            <LikePercentageBox className={styles.element} value={likePercentage} />
+            <ul className={clsx("flexBoxList", "flexBoxListBreak", styles.list)}>
+                <ReportBox
+                    value={downloadsThisWeek}
+                    description="Downloads last week"
+                    formattingFn={millify}
+                />
+                <ReportBox
+                    value={typesAvailable}
+                    description="Definitions available"
+                    formattingFn={millify}
+                />
+                <ReportBox
+                    value={likePercentage}
+                    description="People love Typescript"
+                    formattingFn={percentify}
+                />
+            </ul>
         </div>
     );
 };
