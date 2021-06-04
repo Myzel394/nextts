@@ -1,8 +1,9 @@
+import {useEffect, useRef, useState} from "react";
+import {useElementSize} from "hooks";
 import Header from "components/Header";
 import Title from "components/Title";
 import AreaTitle from "components/AreaTitle";
-import {useEffect, useRef, useState} from "react";
-import {useElementSize} from "hooks";
+import SecondaryInformation from "components/SecondaryInformation";
 
 import styles from "./Showcase.module.css";
 
@@ -34,9 +35,11 @@ const Showcase = () => {
                 }}
             >
                 <Title />
-                <p ref={$description} className={styles.description}>
-                    Combine the best framework with the best language to provide the best websites with the best user & developer experiences.
-                </p>
+                <div ref={$description}>
+                    <SecondaryInformation>
+                        Combine the best framework with the best language to provide the best websites with the best user & developer experiences.
+                    </SecondaryInformation>
+                </div>
             </div>
             <div ref={$title}>
                 <AreaTitle title="Why Next.js + Typescript" />

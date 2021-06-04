@@ -1,3 +1,5 @@
+import SecondaryInformation from "components/SecondaryInformation";
+
 import styles from "./ReportBox.module.css";
 
 export interface ReportBoxProps {
@@ -12,7 +14,9 @@ const ReportBox = ({
     return (
         <article className={styles.wrapper}>
             <h1 className={styles.title}>{title}</h1>
-            <p className={styles.description}>{description}</p>
+            <SecondaryInformation className={styles.description}>
+                {description}
+            </SecondaryInformation>
         </article>
     );
 };

@@ -1,6 +1,7 @@
 import React, {ReactNode} from "react";
 import Image from "next/image";
 import clsx from "clsx";
+import SecondaryInformation from "components/SecondaryInformation";
 
 import Editor from "./Editor";
 import styles from "./Stepper.module.css";
@@ -34,9 +35,9 @@ const Stepper = ({
                     </div>
                 )}
                 <aside className={styles.explanationContainer}>
-                    <p>
+                    <SecondaryInformation>
                         {description}
-                    </p>
+                    </SecondaryInformation>
                 </aside>
             </div>
             {children}

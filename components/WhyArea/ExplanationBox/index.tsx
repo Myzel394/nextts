@@ -1,5 +1,6 @@
 import {IconType} from "react-icons";
 import ButtonLink from "components/ButtonLink";
+import {SecondaryInformation} from "components/index";
 
 import styles from "./ExplanationBox.module.css";
 
@@ -26,7 +27,9 @@ const ExplanationBox = ({
             {/* eslint-disable-next-line @shopify/jsx-prefer-fragment-wrappers */}
             <div>
                 <h1>{title}</h1>
-                <p>{description}</p>
+                <SecondaryInformation>
+                    {description}
+                </SecondaryInformation>
             </div>
             <div className={styles.linkWrapper}>
                 <ButtonLink

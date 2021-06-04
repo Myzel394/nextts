@@ -1,9 +1,6 @@
-import Showcase from "components/Showcase";
-import WhyArea from "components/WhyArea";
-import InstallationArea from "components/InstallationArea";
-import ReportStripe, {ReportStripeProps} from "components/ReportStripe";
-import {GetStaticPropsContext, GetStaticPropsResult} from "next";
+import {GetStaticPropsResult} from "next";
 import inSeconds from "in-seconds";
+import {Showcase, WhyArea, InstallationArea, ReportStripe, ReportStripeProps} from "components";
 import {getPackageDownloads, getTypescriptTypesAmount} from "utils";
 
 export type HomeProps = ReportStripeProps;
@@ -28,9 +25,7 @@ export default function Home({
 }
 
 
-export const getStaticProps = async (
-    context: GetStaticPropsContext,
-): Promise<GetStaticPropsResult<HomeProps>> => {
+export const getStaticProps = async (): Promise<GetStaticPropsResult<HomeProps>> => {
     const [downloadsThisWeek, typesAvailable] = await Promise.allSettled([
         getPackageDownloads("typescript"), getTypescriptTypesAmount(),
     ]);

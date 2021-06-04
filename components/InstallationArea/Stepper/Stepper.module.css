@@ -22,12 +22,6 @@
     flex: 1 0 calc(100% / 2);
 }
 
-.explanationContainer p {
-    color: var(--text-secondary);
-    font-weight: 300;
-    line-height: 1.6;
-}
-
 .singleText {
     max-width: 40rem;
 }

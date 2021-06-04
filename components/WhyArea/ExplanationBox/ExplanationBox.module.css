@@ -19,12 +19,6 @@
     margin-top: 0;
 }
 
-.wrapper p {
-    font-weight: 300;
-    color: #aaa;
-    line-height: 1.6;
-}
-
 .linkWrapper {
     width: fit-content;
 }
