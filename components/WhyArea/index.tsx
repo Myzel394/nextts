@@ -45,6 +45,7 @@ const WhyArea = () => {
             </div>
             <div className={styles.box}>
                 <ExplanationBox
+                    isExternal
                     title="Fully supported"
                     description="Next.js fully supports Typescript. It’s just a few commands away."
                     link="https://nextjs.org/learn/excel/typescript"
@@ -54,6 +55,7 @@ const WhyArea = () => {
             </div>
             <div className={styles.box}>
                 <ExplanationBox
+                    isExternal
                     title="Next.js Features"
                     description="Use all features Next.js provides. SEO, Image Optimization, Fast Refresh, Zero Config, and more!"
                     link="https://nextjs.org/#features"

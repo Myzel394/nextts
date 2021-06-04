@@ -9,6 +9,8 @@ export interface ExplanationBoxProps {
     link: string;
     linkTitle: string;
     icon: IconType;
+
+    isExternal?: boolean;
 }
 
 const ExplanationBox = ({
@@ -16,6 +18,7 @@ const ExplanationBox = ({
     link,
     linkTitle,
     description,
+    isExternal,
     icon: Icon,
 }: ExplanationBoxProps) => {
     return (
@@ -27,6 +30,7 @@ const ExplanationBox = ({
             </div>
             <div className={styles.linkWrapper}>
                 <ButtonLink
+                    isExternal={isExternal}
                     endIcon={<Icon />}
                     href={link}
                 >
