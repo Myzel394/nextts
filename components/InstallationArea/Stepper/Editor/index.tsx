@@ -1,12 +1,11 @@
-import React, {useEffect, useRef} from "react";
-import {useCountUp} from "react-countup";
-import {useIsVisible} from "react-is-visible";
+import React, {useRef} from "react";
 import CodeEditor from "react-simple-code-editor";
 import {highlight} from "prismjs/components/prism-core";
 import bash from "prismjs/components/prism-bash";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
+import {useVisibleCountUp} from "hooks";
 
 import Bar from "./Bar";
 import styles from "./Editor.module.css";
@@ -24,29 +23,18 @@ const easeInQuad = (t: number, b: number, c: number, d: number): number => {
 const Editor = ({
     code,
 }: EditorProps) => {
-    const $hasBeenStarted = useRef<boolean>(false);
+    const $wrapper = useRef<HTMLDivElement>();
     const {
         countUp,
-        reset,
         start,
-    } = useCountUp({
+        reset,
+        hasBeenStarted,
+    } = useVisibleCountUp({
+        ref: $wrapper,
         end: code.length,
-        duration: 2,
-        decimals: 0,
-        easingFn: easeInQuad,
     });
-    const codeIndex = $hasBeenStarted.current ? parseInt(countUp.toString(), 10) : code.length;
+    const codeIndex = hasBeenStarted ? parseInt(countUp.toString(), 10) : code.length;
     const currentCode = code.substring(0, codeIndex);
-
-    const $wrapper = useRef<HTMLDivElement>();
-    const isVisible = useIsVisible($wrapper);
-
-    useEffect(() => {
-        if (isVisible && !$hasBeenStarted.current) {
-            $hasBeenStarted.current = true;
-            start();
-        }
-    }, [isVisible, start]);
 
     return (
         <div ref={$wrapper} className={styles.wrapper}>

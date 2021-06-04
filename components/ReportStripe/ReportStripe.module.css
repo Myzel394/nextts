@@ -1,0 +1,9 @@
+.wrapper {
+    background: var(--background-inset);
+    display: flex;
+    justify-content: center;
+}
+
+.element:not(:last-of-type) {
+    border-right: .1em solid var(--background);
+}
