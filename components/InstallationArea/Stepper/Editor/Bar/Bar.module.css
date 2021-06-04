@@ -28,6 +28,7 @@
     display: flex;
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .buttonsWrapper > .button:not(:last-of-type) {
