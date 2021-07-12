@@ -42,6 +42,6 @@ export const getStaticProps = async (): Promise<GetStaticPropsResult<HomeProps>>
             // According to latest Stackoverflow survey: https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages
             likePercentage: 67,
         },
-        revalidate: inSeconds.hours(1),
+        revalidate: inSeconds.days(1),
     };
 };
