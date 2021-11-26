@@ -1,4 +1,4 @@
-import {useLayoutEffect, useState} from "react";
+import {useEffect, useLayoutEffect, useState} from "react";
 
 const useElementSize = (reference): [number | undefined, number | undefined] => {
     const [width, setWidth] = useState<number | undefined>();
