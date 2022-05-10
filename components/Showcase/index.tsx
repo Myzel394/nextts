@@ -37,6 +37,9 @@ const Showcase = () => {
                 <Title />
                 <div ref={$description}>
                     <SecondaryInformation>
+                        Learn how to add TypeScript to your Next.js project.
+                    </SecondaryInformation>
+                    <SecondaryInformation>
                         Combine the best framework with the best language to provide the best websites with the best user & developer experiences.
                     </SecondaryInformation>
                 </div>
