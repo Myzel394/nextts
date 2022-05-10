@@ -31,7 +31,7 @@ const CrossPlatform = () => {
             </h2>
             <div className={styles.icons}>
                 {Object.entries(ICONS).map(([name, Icon]) =>
-                    <div key={name} className={styles.icon} >
+                    <div key={name} className={styles.icon} title={`Support for ${name} included`}>
                         <Icon size="1.8rem" />
                         <div className={styles.tooltip}>
                             <div className={styles.arrowWrapper}>
