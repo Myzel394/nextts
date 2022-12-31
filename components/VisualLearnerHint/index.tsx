@@ -18,7 +18,7 @@ const VisualLearnerHint = () => {
                         color="#FDF854"
                         thumbnailUrl="/assets/images/mosh.jpg"
                         channelName="Programming with Mosh"
-                        videoLink="https://invidious.exonip.de/watch?v=NjN00cM18Z4"
+                        videoLink="https://www.youtube.com/watch?v=d56mG7DezGs"
                     />
                 </li>
                 <li className={clsx("flexBoxElement", styles.element)}>
@@ -26,7 +26,7 @@ const VisualLearnerHint = () => {
                         color="#4684DB"
                         thumbnailUrl="/assets/images/fireship.jpg"
                         channelName="Fireship.io"
-                        videoLink="https://invidious.exonip.de/watch?v=ahCwqrYpIuM"
+                        videoLink="https://odysee.com/@fireship:6/typescript-the-basics:6?r=HGbpybB1xhXtncacm15KsW7bHhfRHfum"
                     />
                 </li>
                 <li className={clsx("flexBoxElement", styles.element)}>
@@ -34,7 +34,7 @@ const VisualLearnerHint = () => {
                         color="#101C42"
                         thumbnailUrl="/assets/images/freecodecamp.jpg"
                         channelName="freeCodeCamp.org"
-                        videoLink="https://invidious.exonip.de/watch?v=gp5H0Vw39yw"
+                        videoLink="https://www.youtube.com/watch?v=gp5H0Vw39yw"
                     />
                 </li>
             </ul>
