@@ -17,25 +17,23 @@ const VideoBox = ({
     videoLink,
     color,
 }: VideoBoxProps) => {
-    const style = {
-        boxShadow: `0 .2em 5em ${tinycolor(color).setAlpha(0.5).toString()}`,
-    } as any;
-
     return (
         <>
             <figure className={styles.wrapper}>
-                <div style={style}>
-                    <a href={videoLink} target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src={thumbnailUrl}
-                            alt={channelName}
-                            width="100%"
-                            height="60em"
-                            layout="responsive"
-                            objectFit="cover"
-                        />
-                    </a>
-                </div>
+                <a href={videoLink} target="_blank" rel="noopener noreferrer">
+                    <Image
+                        src={thumbnailUrl}
+                        alt={channelName}
+                        width={1280}
+                        height={720}
+                        style={{
+                            objectFit: "cover",
+                            width: "100%",
+                            height: "20em",
+                            boxShadow: `0 .2em 5em ${tinycolor(color).setAlpha(0.5).toString()}`,
+                        }}
+                    />
+                </a>
                 <figcaption>
                     <SecondaryInformation>
                         {channelName}
