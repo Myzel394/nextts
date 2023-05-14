@@ -1,7 +1,7 @@
 import {
     SiAtom, SiEclipseide,
     SiIntellijidea,
-    SiReplDotIt,
+    SiReplit,
     SiSublimetext,
     SiVim,
     SiVisualstudiocode,
@@ -18,7 +18,7 @@ const ICONS = {
     Atom: SiAtom,
     Vim: SiVim,
     "IntelliJ IDEA": SiIntellijidea,
-    "Repl.it": SiReplDotIt,
+    "Repl.it": SiReplit,
     "Sublime Text": SiSublimetext,
     Eclipse: SiEclipseide,
 };
