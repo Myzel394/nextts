@@ -53,10 +53,10 @@ export const getStaticProps = async (): Promise<GetStaticPropsResult<HomeProps>>
         props: {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            downloadsThisWeek: downloadsThisWeek.value,
+            downloadsThisWeek: downloadsThisWeek.value.value,
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            typesAvailable: typesAvailable.value,
+            typesAvailable: typesAvailable.value.value,
             // According to latest Stackoverflow survey: https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages
             likePercentage: 67,
         },

@@ -38,8 +38,11 @@ const useVisibleCountUp = ({
     });
     const isVisible = useIsVisible(ref);
 
+    console.log("useVisibleCountUp", isVisible);
+
     useEffect(() => {
         if (isVisible && !$hasBeenStarted.current) {
+            console.log("useVisibleCountUp", "start", end);
             $hasBeenStarted.current = true;
             start();
         }

@@ -20,12 +20,15 @@ const ReportBox = ({
     const $wrapper = useRef<HTMLLIElement>();
     const {
         countUp: title,
+        hasBeenStarted
     } = useVisibleCountUp({
         end: value,
         duration: 2,
         ref: $wrapper,
         formattingFn,
     });
+
+    console.log("ReportBox", title, hasBeenStarted);
 
     return (
         <li ref={$wrapper} className={clsx("flexBoxElement", styles.wrapper)}>
