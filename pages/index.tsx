@@ -31,12 +31,8 @@ export const getStaticProps = async (): Promise<GetStaticPropsResult<HomeProps>>
     const [downloadsThisWeek, typesAvailable] = await (() => {
         if (process.env.NODE_ENV !== "production") {
             return Promise.allSettled([
-                ({
-                    value: 100,
-                }),
-                ({
-                    value: 100,
-                }),
+                100,
+                100
             ]);
         }
 
@@ -53,10 +49,10 @@ export const getStaticProps = async (): Promise<GetStaticPropsResult<HomeProps>>
         props: {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            downloadsThisWeek: downloadsThisWeek.value.value,
+            downloadsThisWeek: downloadsThisWeek.value,
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            typesAvailable: typesAvailable.value.value,
+            typesAvailable: typesAvailable.value,
             // According to latest Stackoverflow survey: https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages
             likePercentage: 67,
         },
