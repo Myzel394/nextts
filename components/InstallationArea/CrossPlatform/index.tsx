@@ -1,8 +1,9 @@
 import {
-    SiAtom, SiEclipseide,
+    SiEclipseide,
     SiIntellijidea,
     SiReplit,
     SiSublimetext,
+    SiNeovim,
     SiVim,
     SiVisualstudiocode,
     SiWebstorm,
@@ -13,9 +14,9 @@ import styles from "./CrossPlatform.module.css";
 
 const ICONS = {
     "Visual Studio Code": SiVisualstudiocode,
+    "Neovim": SiNeovim,
     Webstorm: SiWebstorm,
     Netbeans: DiNetbeans,
-    Atom: SiAtom,
     Vim: SiVim,
     "IntelliJ IDEA": SiIntellijidea,
     "Repl.it": SiReplit,

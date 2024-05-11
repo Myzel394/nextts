@@ -8,31 +8,30 @@
     "start": "next start"
   },
   "dependencies": {
-    "axios": "^1.4.0",
-    "clsx": "^1.2.1",
+    "axios": "^1.6.8",
+    "clsx": "^2.1.1",
     "download-stats": "^0.3.4",
     "in-seconds": "^1.2.0",
     "intersection-observer": "^0.12.2",
     "millify": "^6.1.0",
-    "next": "13.4.2",
+    "next": "^13.4.2",
     "prismjs": "^1.29.0",
-    "react": "18.2.0",
+    "react": "^18.3.1",
     "react-countup": "^4.3.3",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.8.0",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
     "react-is-visible": "^1.2.0",
     "react-simple-code-editor": "^0.13.1",
-    "sass": "^1.62.1",
+    "sass": "^1.77.1",
     "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/node": "^15.12.0",
-    "@types/prismjs": "^1.26.0",
-    "@types/react": "^17.0.9",
+    "@types/node": "^20.12.11",
+    "@types/prismjs": "^1.26.4",
+    "@types/react": "^18.3.2",
     "@types/react-countup": "^4.3.1",
     "@types/react-icons": "^3.0.0",
-    "@types/tinycolor2": "^1.4.3",
-    "typescript": "^5.0.4"
+    "@types/tinycolor2": "^1.4.6",
+    "typescript": "^5.4.5"
   }
 }

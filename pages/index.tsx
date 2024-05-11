@@ -31,12 +31,8 @@ export const getStaticProps = async (): Promise<GetStaticPropsResult<HomeProps>>
     const [downloadsThisWeek, typesAvailable] = await (() => {
         if (process.env.NODE_ENV !== "production") {
             return Promise.allSettled([
-                ({
-                    value: 100,
-                }),
-                ({
-                    value: 100,
-                }),
+                100,
+                100
             ]);
         }
 
