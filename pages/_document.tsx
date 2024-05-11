@@ -26,6 +26,8 @@ export default class CustomDocument extends Document {
                     <meta property="og:url" content="https://www.nextts.org" />
                     <meta property="og:type" content="website" />
                     <meta property="og:locale" content="en_US" />
+
+                    <meta name="darkreader-lock" />
                 </Head>
                 <body>
                     <Main />
